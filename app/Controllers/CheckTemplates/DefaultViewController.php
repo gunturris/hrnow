@@ -7,4 +7,8 @@ class DefaultViewController{
         return 'Page not found!';
          
     }
+
+    public function login_page(){
+        
+    }
 }
