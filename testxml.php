@@ -38,9 +38,12 @@ class xml_to_form{
             return (string) $object[$attribute];
     }
     
+    public function dynamic_field($datas , $value){
+        $view = "<input type=\"{$datas['type']}\" name=\"{$datas['name']}\" value=\"{$value}\" />\n";
+    }
 }
 
 
 $test = (new xml_to_form('sample.xml'))->to_object();
-$t =xml_to_form::array_to_form($test );
+$t = xml_to_form::array_to_form($test );
 var_dump($t  );
