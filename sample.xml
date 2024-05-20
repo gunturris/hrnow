@@ -1,0 +1,8 @@
+<xform>
+    <property>
+        <action></action> 
+        <onsubmit></onsubmit>
+    </property>
+    <fieldset name="namef" type="textfield" id="name" required="1">Nama</fieldset>
+    <fieldset name="passwd" type="password" id="password" required="1">Password</fieldset>
+</xform>
