@@ -19,7 +19,14 @@ Router::get('/', 'Sandbox\MainController@home')->setName('home');
 
 // API
 Router::group(['prefix' => '/api', 'middleware' => \App\Middlewares\ApiVerification::class], function () {
-	Router::resource('/demo', 'ApiController');
+	Router::resource( '/demo', 'ApiController' );
+});
+
+// API
+Router::group(['prefix' => '/time'], function () {
+    Router::group(['prefix' => '/reference'], function () {
+	    Router::get('/form', '\App\Controllers\Time\ShiftController@mainform')->setName('home'); 
+    });
 });
 
     // CALLBACK EXAMPLES

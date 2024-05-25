@@ -1,15 +1,14 @@
 <?php 
 namespace App\Controllers\Sandbox;
 
-use App\View;
+use App\PageRender;
 
 class MainController{
 
-    public function home(){
-        
-        return View::present('dashboard.modalbox', [
+    public function home(){ 
+        return PageRender::present('dashboard.modalbox', [
 			'current_page' => 'project',  
-            //'dropdownassesor' => dropdown_by_json( 'assesment_roles.json'  , 'code', 'assessor_label' ,'04'  ),
+            'dropdownassesor' => ''
 		]);
     }
 }
