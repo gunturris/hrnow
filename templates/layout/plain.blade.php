@@ -13,7 +13,7 @@
 
   </head>
 
-  <body class="nav-md">
+  <body class="nav-md"  style="background-color:#fff">
     <div class="container body">
       <div class="main_container">
          

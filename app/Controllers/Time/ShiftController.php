@@ -11,4 +11,11 @@ class ShiftController{
             'dropdownassesor' => ''
 		]);
     }
+
+    public function index(){
+        return PageRender::present('time.reference.shift_list', [
+			'current_page' => 'project',  
+            'dropdownassesor' => ''
+		]);
+    }
 }
