@@ -12,6 +12,7 @@ $capsule = new Capsule;
 
 $capsule->addConnection([
     'driver' => $_ENV['DB_DRIVER'],
+    'port' => $_ENV['DB_PORT'],
     'host' => $_ENV['DB_HOST'],
     'database' => $_ENV['DB_DATABASE'],
     'username' => $_ENV['DB_USERNAME'],

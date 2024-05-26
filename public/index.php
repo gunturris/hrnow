@@ -7,3 +7,4 @@ require '../vendor/autoload.php';
 require_once '../bootup.php';
 // Start the routing
 \App\Router::start();
+DB::disconnect($_ENV['DB_NAME']);
