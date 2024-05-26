@@ -38,10 +38,7 @@
                     <div class="clearfix"></div>
                   </div>
 
-                  <div class="x_content">
-
-                     
-
+                  <div class="x_content">  
                     <div class="table-responsive">
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
@@ -85,14 +82,16 @@
                                 </h6>
                             </td>
                           </tr>
-                          @endforeach; 
+                          @endforeach 
                           
 
                         </tbody>
                       </table>
                     </div>
 							
-						
+                   @include('layout.pagination') 
+
+
                   </div>
                 </div>
               </div>
@@ -101,45 +100,5 @@
 
 
           
-           <!-- Modal -->
-           <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" 
-                  aria-labelledby="modalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered  modal-lg" role="document" >
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modalCenterTitle">Data jam kerja</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body" style="padding:5px">
-                  <iframe id="frameModalBox" src="/misc/loading" height="400px" width="100%" style="margin:0;border:0;">iframe not support</iframe>
-                </div>
-                {{--<div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>--}}
-              </div>
-            </div>
-          </div> 
-
-          <script language="Javascript">
-
-            function openModalFromList(title, url){
-               
-                $('#modalCenterTitle').html(title)
-                $('#frameModalBox').attr('src',  url)
-      
-                $('#modalForm').modal('show')
-            }
-
-            function deleteConfirmFormList(msg, url){
-              x = confirm(msg);
-              if(x){
-                location.href=url;
-              
-              }
-              return;
-            }
-          </script>
+           
 @endsection

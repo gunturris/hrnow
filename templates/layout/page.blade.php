@@ -7,10 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- jQuery -->
-    <script src="/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<link rel="icon" href="/assets/images/favicon.ico" type="image/ico" />
 
     <title>HRIS RSKM </title>
@@ -146,7 +142,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            Gentelella - Bootstrap Admin Template  </a>
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -156,8 +152,53 @@
 
 
           @if($modalDataList == '1')
-         
+         <!-- Modal -->
+         <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" 
+                  aria-labelledby="modalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered  modal-lg" role="document" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalCenterTitle">Data jam kerja</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" style="padding:5px">
+                  <iframe id="frameModalBox" src="/misc/loading" height="400px" width="100%" style="margin:0;border:0;">iframe not support</iframe>
+                </div>
+                {{--<div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>--}}
+              </div>
+            </div>
+          </div> 
+
+          <script language="Javascript">
+
+            function openModalFromList(title, url){
+               
+                $('#modalCenterTitle').html(title)
+                $('#frameModalBox').attr('src',  url)
+      
+                $('#modalForm').modal('show')
+            }
+
+            function deleteConfirmFormList(msg, url){
+              x = confirm(msg);
+              if(x){
+                location.href=url;
+              
+              }
+              return;
+            }
+          </script>
           @endif
+    
+    <!-- jQuery -->
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
     <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
