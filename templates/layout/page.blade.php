@@ -6,6 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery -->
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<link rel="icon" href="/assets/images/favicon.ico" type="image/ico" />
 
     <title>HRIS RSKM </title>
@@ -149,10 +154,10 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+          @if($modalDataList == '1')
+         
+          @endif
     <!-- FastClick -->
     <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->

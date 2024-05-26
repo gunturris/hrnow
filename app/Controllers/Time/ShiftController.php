@@ -19,8 +19,11 @@ class ShiftController{
     }
 
     public function index(){
+        $shifts = RefShift::get(); 
         return PageRender::present('time.reference.shift_list', [
-			'current_page' => 'project',  
+			'current_page'  => 'project', 
+            'modalDataList' => '1',
+            'datas_shifts'         => $shifts,
             'dropdownassesor' => ''
 		]);
     }

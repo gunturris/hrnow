@@ -8,5 +8,6 @@ class RefShift extends Model{
     protected $primaryKey = 'id';
  
 
-    const CREATED_AT = 'created_at';
+    //const CREATED_AT = 'created_at';
+    //const CREATED_BY = 'created_by';
 }
