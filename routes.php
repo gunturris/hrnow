@@ -25,7 +25,8 @@ Router::group(['prefix' => '/api', 'middleware' => \App\Middlewares\ApiVerificat
 // API
 Router::group(['prefix' => '/time'], function () {
     Router::group(['prefix' => '/reference'], function () {
-	    Router::get('/form', '\App\Controllers\Time\ShiftController@mainform')->setName('form-shift'); 
+	    //Router::get('/form', '\App\Controllers\Time\ShiftController@mainform')->setName('form-shift'); 
+        Router::get('/form', '\App\Controllers\Time\ShiftController@check_form')->setName('form-shift'); 
 	    Router::get('/datas', '\App\Controllers\Time\ShiftController@index')->setName('home-shift'); 
     });
 });
